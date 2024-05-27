@@ -263,7 +263,7 @@ img {
 @media (max-width: 100000px) {
     .header {
         justify-content: center;
-        height:35px;
+        height:55px;
     }
 
     .left-image {
