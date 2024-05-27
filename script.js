@@ -173,3 +173,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+document.getElementById('rightImage').addEventListener('click', function() {
+    if (window.innerWidth <= 500) {
+        const hotbarMenu = document.getElementById('hotbarMenu');
+        hotbarMenu.style.display = 'flex';
+    }
+});
+
+document.getElementById('hotbarMenu').addEventListener('click', function() {
+    this.style.display = 'none';
+});
