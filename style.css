@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
     scroll-behavior: smooth;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+   /* Prevent horizontal scrolling */
 }
 
 
@@ -54,6 +54,7 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow-x: hidden;
     
 }
 
