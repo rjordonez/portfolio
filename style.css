@@ -91,16 +91,18 @@ html, body {
 .text-container {
     position: absolute;
     left: 0;
-    padding-left: 20px;
     max-width: 350px;
     text-align: left;
     z-index: 1;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .project-info {
     position: absolute;
     top: 100px;
-    left: 70px;
+    left: 0px;
+    padding-left: 40px;
     text-align: left;
     z-index: 1;
     width: 35%;
@@ -140,14 +142,12 @@ html, body {
 }
 
 h1 {
-    margin-left: 40px;
     font-size: 40px;
     font-weight: 800;
     color: white;
 }
 
 p {
-    margin-left: 40px;
     font-size: 15px; /* Base font size plus a value that scales with viewport width */
     color: white;
     padding-right:50px;
@@ -267,7 +267,10 @@ img {
     margin-left: 2px;
     margin-bottom: 4px;
 }
-
+.hotbar-menu{
+    visibility: hidden;
+    position:fixed;
+}
 @keyframes blink {
     0% { opacity: 1; }
     50% { opacity: 0; }
@@ -294,22 +297,6 @@ img {
 
     .section {
         height: calc(100vh); /* Adjust min-height to account for the header height */
-        
-    }
-    .section1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .project-info{
-        left:40px;
-        padding-left: 0;
-    }
-    .text-container {
-        padding-left: 0;
-        max-width: 100%;
     }
     .project-info{
         width:70%;
@@ -360,6 +347,7 @@ img {
         justify-content: center;
         align-items: center;
         text-align: center;
+        visibility: visible;
     }
 
     .hotbar-menu .menu-item {
