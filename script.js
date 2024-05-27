@@ -14,6 +14,27 @@ window.addEventListener('scroll', function() {
     }
 
 });
+
+let topButton = document.getElementById("topButton");
+let section3 = document.querySelector('.section3');
+
+// Function to check if the user has scrolled 90% of section 3
+function checkSection3Scroll() {
+    let rect = section3.getBoundingClientRect();
+    let windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    let sectionHeight = section3.offsetHeight;
+    let scrolledHeight = windowHeight - rect.top;
+    return scrolledHeight >= sectionHeight * 0.8;
+}
+
+// When the user scrolls, check if they have scrolled 90% of section 3
+window.onscroll = function() {
+    if (checkSection3Scroll()) {
+        topButton.classList.add("show");
+    } else {
+        topButton.classList.remove("show");
+    }
+};
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
     const arrowButton = document.querySelector('.arrow-button');
@@ -183,35 +204,7 @@ document.getElementById('rightImage').addEventListener('click', function() {
 document.getElementById('hotbarMenu').addEventListener('click', function() {
     this.style.display = 'none';
 });
-document.addEventListener('DOMContentLoaded', function() {
-    const menuButton = document.getElementById('menuButton');
-    const menuButtons = document.getElementById('menuButtons');
-
-    menuButton.addEventListener('click', function() {
-        if (menuButtons.style.display === 'flex') {
-            menuButtons.style.display = 'none';
-        } else {
-            menuButtons.style.display = 'flex';
-        }
-    });
-});
-let topButton = document.getElementById("topButton");
-let section3 = document.querySelector('.section3');
-
-// Function to check if the user has scrolled 90% of section 3
-function checkSection3Scroll() {
-    let rect = section3.getBoundingClientRect();
-    let windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-    let sectionHeight = section3.offsetHeight;
-    let scrolledHeight = windowHeight - rect.top;
-    return scrolledHeight >= sectionHeight * 0.8;
-}
-
-// When the user scrolls, check if they have scrolled 90% of section 3
-window.onscroll = function() {
-    if (checkSection3Scroll()) {
-        topButton.classList.add("show");
-    } else {
-        topButton.classList.remove("show");
-    }
+topButton.onclick = function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    topButton.classList.remove("show");
 };
