@@ -132,7 +132,6 @@ html, body {
     align-items: flex-end; /* Align to the bottom */
     pointer-events: none;
     z-index: 0;
-    animation: moveDown 1s ease-out forwards;
 }
 
 .overlay-image {
@@ -142,7 +141,7 @@ html, body {
 
 h1 {
     margin-left: 40px;
-    font-size: 25px;
+    font-size: 40px;
     font-weight: 800;
     color: white;
 }
@@ -162,16 +161,6 @@ img {
     max-height: 100%;
 }
 
-
-
-@keyframes moveDown {
-    0% {
-        transform: translateY(-20%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
 
 .section3 {
     background: white;
@@ -259,6 +248,32 @@ img {
     filter: invert(1);
     transition: clip-path 1s, filter 1s;
 }
+#typed-text-container {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 24px;
+    display: inline;
+    white-space: nowrap;
+    overflow: hidden; /* Ensures text does not overflow */
+    max-width: 100%;
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: white;
+    vertical-align: bottom;
+    animation: blink 1s infinite;
+    margin-left: 2px;
+    margin-bottom: 4px;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 /* Mobile Styles */
 @media (max-width: 500px) {
     .header {
@@ -308,6 +323,9 @@ img {
     .skills {
          /* Base font size plus a value that scales with viewport width */
         width:100%;
+    }
+    .overlay-container{
+        visibility: hidden;
     }
     
 }

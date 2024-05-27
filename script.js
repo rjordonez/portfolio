@@ -104,59 +104,48 @@ window.addEventListener('scroll', function() {
         header.classList.remove('black-images');
     }
 });
-document.addEventListener('DOMContentLoaded', function() {
-    const menuButton = document.getElementById('menuButton');
-    const menuButtons = document.getElementById('menuButtons');
-
-    menuButton.addEventListener('click', function() {
-        if (menuButtons.style.display === 'flex') {
-            menuButtons.style.display = 'none';
-        } else {
-            menuButtons.style.display = 'flex';
-        }
-    });
-});
-let topButton = document.getElementById("topButton");
-let section3 = document.querySelector('.section3');
-
-// Function to check if the user has scrolled 90% of section 3
-function checkSection3Scroll() {
-    let rect = section3.getBoundingClientRect();
-    let windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-    let sectionHeight = section3.offsetHeight;
-    let scrolledHeight = windowHeight - rect.top;
-    return scrolledHeight >= sectionHeight * 0.8;
-}
-
-// When the user scrolls, check if they have scrolled 90% of section 3
-window.onscroll = function() {
-    if (checkSection3Scroll()) {
-        topButton.classList.add("show");
-    } else {
-        topButton.classList.remove("show");
-    }
-};
-
-// When the user clicks on the button, scroll to the top of the document and hide the button
-topButton.onclick = function() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-    topButton.classList.remove("show");
-};
 document.addEventListener("DOMContentLoaded", function() {
-    const text = "hi. my name is rex a founder who has dedicated the last 3 years to the computer science industry through artificial intelligence, education, and product design.";
+    const textElement = document.getElementById("typed-text");
+    const firstPart = "Hi my name is Rex Ordonez.";
+    const secondPart = "I am a ";
+    const roles = ["founder.", "software engineer.", "student."];
+    let currentRoleIndex = 0;
+    let fullText = firstPart + "<br>" + secondPart + roles[currentRoleIndex];
     let index = 0;
-    const speed = 60; // Adjust typing speed (in milliseconds)
+    const typingSpeed = 60; // Typing speed in milliseconds
+    const deletingSpeed = 30; // Deleting speed in milliseconds
+    const delayBetweenTexts = 1000; // Delay before starting to delete and type new text
+    let isDeleting = false;
 
     function typeWriter() {
-        if (index < text.length) {
-            document.getElementById("typed-text").textContent += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, speed);
+        if (isDeleting) {
+            if (index > firstPart.length + "<br>".length + secondPart.length) {
+                textElement.innerHTML = fullText.substring(0, index - 1);
+                index--;
+                setTimeout(typeWriter, deletingSpeed);
+            } else {
+                isDeleting = false;
+                currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                fullText = firstPart + "<br>" + secondPart + roles[currentRoleIndex];
+                setTimeout(typeWriter, delayBetweenTexts);
+            }
+        } else {
+            if (index < fullText.length) {
+                textElement.innerHTML = fullText.substring(0, index + 1);
+                index++;
+                setTimeout(typeWriter, typingSpeed);
+            } else {
+                setTimeout(() => {
+                    isDeleting = true;
+                    setTimeout(typeWriter, delayBetweenTexts);
+                }, delayBetweenTexts);
+            }
         }
     }
 
     typeWriter();
 });
+
 document.addEventListener('DOMContentLoaded', () => {
     const rightImage = document.getElementById('rightImage');
     const iconContainer = document.getElementById('iconContainer');
