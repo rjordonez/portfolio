@@ -260,7 +260,7 @@ img {
     transition: clip-path 1s, filter 1s;
 }
 /* Mobile Styles */
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .header {
         justify-content: center;
         height:35px;
