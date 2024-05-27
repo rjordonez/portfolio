@@ -260,10 +260,10 @@ img {
     transition: clip-path 1s, filter 1s;
 }
 /* Mobile Styles */
-@media (max-width: 1000px) {
+@media (max-width: 500px) {
     .header {
         justify-content: center;
-        height:35px;
+        height:75px;
     }
 
     .left-image {
