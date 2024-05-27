@@ -294,6 +294,22 @@ img {
 
     .section {
         height: calc(100vh); /* Adjust min-height to account for the header height */
+        
+    }
+    .section1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .project-info{
+        left:40px;
+        padding-left: 0;
+    }
+    .text-container {
+        padding-left: 0;
+        max-width: 100%;
     }
     .project-info{
         width:70%;
