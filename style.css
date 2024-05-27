@@ -234,7 +234,7 @@ img {
 
 .arrow-button {
     position: fixed;
-    top:40lh;
+    bottom: 20px;
     left: 20px;
     width: 5vh; /* Adjust size as needed */
     height: 5vh; /* Adjust size as needed */
@@ -263,7 +263,7 @@ img {
 @media (max-width: 500px) {
     .header {
         justify-content: center;
-        height:75px;
+        height:45px;
     }
 
     .left-image {
@@ -291,8 +291,9 @@ img {
         
         font-size:15px; 
     }
-    
-
+    .arrow-button{
+        visibility: hidden;
+    }
     .overlay-image {
         max-width: 20%; /* Adjust the cube size */
         max-height: 20%;
