@@ -263,7 +263,7 @@ img {
 @media screen and (max-width: 480px) and (max-height: 800px) and (-webkit-min-device-pixel-ratio: 2){
     .header {
         justify-content: center;
-        height:35px;
+        height:100px;
     }
 
     .left-image {
