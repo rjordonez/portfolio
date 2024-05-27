@@ -234,7 +234,7 @@ img {
 
 .arrow-button {
     position: fixed;
-    bottom: 20px;
+    top:40lh;
     left: 20px;
     width: 5vh; /* Adjust size as needed */
     height: 5vh; /* Adjust size as needed */
