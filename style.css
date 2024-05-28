@@ -17,7 +17,7 @@ html, body {
     position: fixed;
     width: 100%;
     z-index: 10;
-    overflow-x: hidden;
+    
 }
 
 .right-image {
@@ -339,7 +339,7 @@ img {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100lvh;
+        width: 100lvw;
         height: 100lvh; 
         background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
         color: white;
