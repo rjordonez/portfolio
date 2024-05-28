@@ -28,7 +28,7 @@ html, body {
 .icon-container {
     display: none; /* Initially hidden */
     position: absolute;
-    right: 150px; /* Adjust based on your layout */
+    right: 130px; /* Adjust based on your layout */
     top: 50%;
     transform: translateY(0%);
     flex-direction: row; /* Change to row for horizontal layout */
