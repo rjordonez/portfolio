@@ -17,6 +17,7 @@ html, body {
     position: fixed;
     width: 100%;
     z-index: 10;
+    overflow-x: hidden;
 }
 
 .right-image {
@@ -54,7 +55,6 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow-x: hidden;
     
 }
 
@@ -89,7 +89,6 @@ html, body {
     height: 40px;
     background: black;
 }
-
 .text-container {
     position: absolute;
     left: 0;

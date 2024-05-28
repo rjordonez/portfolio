@@ -127,8 +127,8 @@ window.addEventListener('scroll', function() {
 });
 document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.getElementById("typed-text");
-    const firstPart = "Hi my name is Rex Ordonez.";
-    const secondPart = "I am a ";
+    const firstPart = "Hi my name is Rex!";
+    const secondPart = "I'm a ";
     const roles = ["founder.", "software engineer.", "student."];
     let currentRoleIndex = 0;
     let fullText = firstPart + "<br>" + secondPart + roles[currentRoleIndex];
