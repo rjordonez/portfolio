@@ -1,10 +1,10 @@
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const header = document.querySelector('.header');
     const arrowButton = document.querySelector('.arrow-button');
     const section2 = document.querySelector('.section2');
     const section2Top = section2.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
-    
+
     // Calculate the threshold for when 90% of the viewport is within the white section
     const threshold = windowHeight * 0.05;
     if (section2Top < threshold) {
@@ -28,20 +28,20 @@ function checkSection3Scroll() {
 }
 
 // When the user scrolls, check if they have scrolled 90% of section 3
-window.onscroll = function() {
+window.onscroll = function () {
     if (checkSection3Scroll()) {
         topButton.classList.add("show");
     } else {
         topButton.classList.remove("show");
     }
 };
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const header = document.querySelector('.header');
     const arrowButton = document.querySelector('.arrow-button');
     const section2 = document.querySelector('.section2');
     const section2Top = section2.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
-    
+
     // Calculate the threshold for when 90% of the viewport is within the white section
     const threshold = windowHeight * 0.95;
     if (section2Top < threshold) {
@@ -109,13 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const header = document.querySelector('.arrow-button');
-    
+
     const section2 = document.querySelector('.section2');
     const section2Top = section2.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
-    
+
     // Calculate the threshold for when 90% of the viewport is within the white section
     const threshold = windowHeight * 0.05;
 
@@ -125,7 +125,7 @@ window.addEventListener('scroll', function() {
         header.classList.remove('black-images');
     }
 });
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("typed-text");
     const firstPart = "Hi my name is Rex!";
     const secondPart = "I'm a ";
@@ -194,17 +194,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-document.getElementById('rightImage').addEventListener('click', function() {
+document.getElementById('rightImage').addEventListener('click', function () {
     if (window.innerWidth <= 500) {
         const hotbarMenu = document.getElementById('hotbarMenu');
         hotbarMenu.style.display = 'flex';
     }
 });
 
-document.getElementById('hotbarMenu').addEventListener('click', function() {
+document.getElementById('hotbarMenu').addEventListener('click', function () {
     this.style.display = 'none';
 });
-topButton.onclick = function() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+topButton.onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     topButton.classList.remove("show");
 };

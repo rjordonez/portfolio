@@ -1,9 +1,10 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
     scroll-behavior: smooth;
-   /* Prevent horizontal scrolling */
+    /* Prevent horizontal scrolling */
 }
 
 
@@ -17,45 +18,56 @@ html, body {
     position: fixed;
     width: 100%;
     z-index: 10;
-    
+
 }
 
 .right-image {
     margin-right: 40px;
-    cursor: pointer; /* Add cursor pointer for clickable effect */
+    cursor: pointer;
+    /* Add cursor pointer for clickable effect */
 }
 
 .icon-container {
-    display: none; /* Initially hidden */
+    display: none;
+    /* Initially hidden */
     position: absolute;
-    right: 135px; /* Adjust based on your layout */
+    right: 135px;
+    /* Adjust based on your layout */
     top: 50%;
     transform: translateY(0%);
-    flex-direction: row; /* Change to row for horizontal layout */
-    
+    flex-direction: row;
+    /* Change to row for horizontal layout */
+
     vertical-align: middle;
 }
 
 .icon {
-    margin: 0 10px; /* Horizontal margin */
+    margin: 0 10px;
+    /* Horizontal margin */
     transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 0;
-    transform: translateX(10px); /* Initial position for animation */
-    width: 30px; /* Adjust the size of the icons */
-    height: 30px; /* Adjust the size of the icons */
+    transform: translateX(10px);
+    /* Initial position for animation */
+    width: 30px;
+    /* Adjust the size of the icons */
+    height: 30px;
+    /* Adjust the size of the icons */
 }
 
 .icon.show {
     opacity: 1;
-    transform: translateX(0); /* Final position for animation */
+    transform: translateX(0);
+    /* Final position for animation */
 }
+
 .section {
-    height: calc(100vh); /* Adjust min-height to account for the header height */
+    height: calc(100vh);
+    /* Adjust min-height to account for the header height */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    
+
 }
 
 .section1 {
@@ -77,6 +89,7 @@ html, body {
 .section2 {
     background: linear-gradient(to bottom, rgb(177, 177, 177), white 50%);
     position: relative;
+    display: flex
 }
 
 .section2::after {
@@ -89,6 +102,7 @@ html, body {
     height: 40px;
     background: black;
 }
+
 .text-container {
     position: absolute;
     left: 0;
@@ -113,8 +127,10 @@ html, body {
     font-size: 20px;
     font-weight: 400;
     color: black;
-    margin: 0; /* Remove margin */
-    padding: 0; /* Remove padding */
+    margin: 0;
+    /* Remove margin */
+    padding: 0;
+    /* Remove padding */
 }
 
 .project-info .bold-text {
@@ -132,7 +148,7 @@ html, body {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Align to the bottom */
+    align-items: flex-end;
     pointer-events: none;
     z-index: 0;
 }
@@ -149,14 +165,12 @@ h1 {
 }
 
 p {
-    font-size: 15px; /* Base font size plus a value that scales with viewport width */
+    font-size: 15px;
+    /* Base font size plus a value that scales with viewport width */
     color: white;
-    padding-right:50px;
+    padding-right: 50px;
 }
 
-p1 {
-    font-size: 15px; /* Base font size plus a value that scales with viewport width */
-}
 
 img {
     max-height: 100%;
@@ -168,11 +182,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right:10px;
+    padding-right: 10px;
     font-size: 15px;
 }
+
 .section3 td {
-    
+
     padding: 10px;
 }
 
@@ -194,31 +209,46 @@ img {
 
 .skills {
     font-family: 'Nunito Sans', sans-serif;
-    width:50%;
+    width: 50%;
 }
-.col1{
+
+.col1 {
     text-align: right;
     vertical-align: top;
 }
 
 .top-button {
-    opacity: 0; /* Initial opacity */
-    visibility: hidden; /* Initial visibility */
-    position: fixed; /* Fixed position */
-    bottom: 20px; /* Distance from the bottom */
-    right: 30px; /* Distance from the right */
-    z-index: 99; /* Sit on top */
-    background-color: black; /* Black background */
-    color: white; /* White text */
-    padding: 15px; /* Some padding */
-    border: none; /* Remove borders */
-    cursor: pointer; /* Add a pointer cursor on hover */
-    transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth transition for appearance */
+    opacity: 0;
+    /* Initial opacity */
+    visibility: hidden;
+    /* Initial visibility */
+    position: fixed;
+    /* Fixed position */
+    bottom: 20px;
+    /* Distance from the bottom */
+    right: 30px;
+    /* Distance from the right */
+    z-index: 99;
+    /* Sit on top */
+    background-color: black;
+    /* Black background */
+    color: white;
+    /* White text */
+    padding: 15px;
+    /* Some padding */
+    border: none;
+    /* Remove borders */
+    cursor: pointer;
+    /* Add a pointer cursor on hover */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    /* Smooth transition for appearance */
 }
 
 .top-button.show {
-    opacity: 1; /* Fully visible */
-    visibility: visible; /* Fully visible */
+    opacity: 1;
+    /* Fully visible */
+    visibility: visible;
+    /* Fully visible */
 }
 
 
@@ -226,35 +256,41 @@ img {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    width: 5vh; /* Adjust size as needed */
-    height: 5vh; /* Adjust size as needed */
+    width: 5vh;
+    /* Adjust size as needed */
+    height: 5vh;
+    /* Adjust size as needed */
     cursor: pointer;
     z-index: 2;
-    transition: opacity 0.5s ease, visibility 0.5s ease; 
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .arrow-button.hidden {
     opacity: 0;
     visibility: hidden;
 }
+
 .black-images img {
     filter: invert(1);
     transition: clip-path 1s, filter 1s;
 }
-.black-images .icon
-{
+
+.black-images .icon {
     transition: clip-path 1s, filter 1s, opacity 0.3s ease, transform 0.3s ease;
 }
+
 .arrow-button.black-images2 {
     filter: invert(1);
     transition: clip-path 1s, filter 1s;
 }
+
 #typed-text-container {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 24px;
     display: inline;
     white-space: nowrap;
-    overflow: hidden; /* Ensures text does not overflow */
+    overflow: hidden;
+    /* Ensures text does not overflow */
     max-width: 75%;
 }
 
@@ -268,21 +304,43 @@ img {
     margin-left: 2px;
     margin-bottom: 4px;
 }
-.hotbar-menu{
+
+.demo {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensures it is vertically centered as well */
+    margin-top:300px;
+    width: 100%;
+}
+
+.demo-image {
+    width: 500px;
+    height: auto;
+}
+.hotbar-menu {
     visibility: hidden;
-    position:fixed;
+    position: fixed;
 }
 @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
+
 
 /* Mobile Styles */
 @media (max-width: 500px) {
     .header {
         justify-content: center;
-        height:45px;
+        height: 45px;
     }
 
     .left-image {
@@ -293,55 +351,70 @@ img {
         display: block;
         margin: 0 auto;
         position: relative;
-        right: 15px; /* Adjust this value to move the image slightly to the left */
+        right: 15px;
+        /* Adjust this value to move the image slightly to the left */
     }
 
     .section {
-        height: calc(100vh); /* Adjust min-height to account for the header height */
+        height: calc(100vh);
+        /* Adjust min-height to account for the header height */
     }
-    .project-info{
-        width:70%;
+
+    .project-info {
+        width: 70%;
     }
+
     h1 {
-        font-size:40px; /* Base font size plus a value that scales with viewport width */
+        font-size: 40px;
+        /* Base font size plus a value that scales with viewport width */
     }
 
     p {
-        
-        font-size:15px; 
+
+        font-size: 15px;
     }
-    .arrow-button{
+
+    .arrow-button {
         visibility: hidden;
     }
+
     .overlay-image {
-        max-width: 20%; /* Adjust the cube size */
+        max-width: 20%;
+        /* Adjust the cube size */
         max-height: 20%;
-        margin-bottom: 20px; /* Add margin to move it out of the way */
+        margin-bottom: 20px;
+        /* Add margin to move it out of the way */
     }
 
     .section3 td {
-        font-size: 12px; /* Base font size plus a value that scales with viewport width */
-        
+        font-size: 12px;
+        /* Base font size plus a value that scales with viewport width */
+
     }
-    
+
     .skills {
-         /* Base font size plus a value that scales with viewport width */
-        width:100%;
+        /* Base font size plus a value that scales with viewport width */
+        width: 100%;
     }
-    .overlay-container{
+
+    .overlay-container {
         visibility: hidden;
     }
-    .icon-container{
+
+    .icon-container {
         visibility: hidden;
     }
+
     .hotbar-menu {
-        display: none; /* Hidden initially */
+        display: none;
+        /* Hidden initially */
         position: fixed;
         top: 0;
         left: 0;
         width: 100lvw;
-        height: 100lvh; 
-        background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+        height: 100lvh;
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Semi-transparent background */
         color: white;
         z-index: 1000;
         flex-direction: column;
@@ -349,11 +422,17 @@ img {
         align-items: center;
         text-align: center;
         visibility: visible;
+
     }
 
     .hotbar-menu .menu-item {
         margin: 20px 0;
         font-size: 24px;
         cursor: pointer;
+
+    }
+    .demo-image {
+        max-width: 80%;
+        height: auto;
     }
 }
