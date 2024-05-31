@@ -206,6 +206,11 @@ img {
     width: 100%;
     border-collapse: collapse;
 }
+.table-container {
+    position:absolute;
+    top: 100px;
+}
+
 
 .skills {
     font-family: 'Nunito Sans', sans-serif;
@@ -310,11 +315,11 @@ img {
     justify-content: center;
     align-items: center; /* Ensures it is vertically centered as well */
     margin-top:150px;
-    max-width:100%;
+    width:100%;
 }
 
 .demo-image {
-    max-width: 50%;
+    width: 50%;
     height: auto;
 }
 .hotbar-menu {
