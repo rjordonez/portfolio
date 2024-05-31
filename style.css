@@ -309,12 +309,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center; /* Ensures it is vertically centered as well */
-    margin-top:300px;
-    width: 100%;
+    margin-top:150px;
+    max-width:100%;
 }
 
 .demo-image {
-    width: 70%;
+    max-width: 50%;
     height: auto;
 }
 .hotbar-menu {
@@ -432,7 +432,7 @@ img {
 
     }
     .demo-image {
-        max-width: 80%;
+        width:  100%;
         height: auto;
     }
 }
